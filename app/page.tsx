@@ -1,6 +1,8 @@
 import axios from "axios";
 
+
 async function getUserDetails() {
+
   try {
     const response = await axios.get("http://localhost:3000/api/user")
 	  return response.data;
@@ -9,19 +11,23 @@ async function getUserDetails() {
   }
 }
 
+/*
+Maybe the backend server is down orelse if you put anything from your side than it's not a problem
+*/ 
+
 export default async function Home() {
   const userData = await getUserDetails();
 
   return (
-    <div className="flex flex-col justify-center h-screen">
-        <div className="flex justify-center">
-            <div className="border p-8 rounded">
-                <div>
-                    Name: {userData?.name}
-                </div>
-                Email: {userData?.email}
-            </div>
+    <div>
+      <div className="border-b p-3 font-semibold">
+        Medium
+      </div>
+      <div className="flex justify-center items-center h-screen">
+        <div>
+          Welcome to medium blogs page
         </div>
+      </div>
     </div>
   );
 }
