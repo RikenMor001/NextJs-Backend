@@ -22,8 +22,12 @@ export default async function Home() {
   }, 5000);
   return (
     <div>
-      <div className="border-b p-3 font-semibold">
-        Medium
+          <div className="border-b p-3 font-semibold ">
+              Medium
+          </div>
+
+      <div className="flex justify-center font-bold bg-gray-100">
+      Get unlimited access to the best of Medium for less than $1/week.
       </div>
       <div>
         <div className="h-screen grid grid-cols-2 flex justify-center items-center">
@@ -41,36 +45,34 @@ export default async function Home() {
                   This is the title of the content
               </div>
               <div className="text-lg">
-                This is the actual content, I can write any yada yada text and no one's going to judge me. I will give the bramhacks 2024 and I am 
-                going to win it.
+              This is the actual content, this is where posts will be popping up. 
               </div>
+              <br></br>
               <div className="text-xl font-bold">
                   This is the title of the content
               </div>
               <div className="text-lg">
-                This is the actual content, I can write any yada yada text and no one's going to judge me. I will give the bramhacks 2024 and I am 
-                going to win it.
+                This is the actual content, this is where posts will be popping up.
               </div>
-
+              <br></br>
               <div className="text-xl font-bold">
                   This is the title of the content
               </div>
               <div className="text-lg">
-                This is the actual content, I can write any yada yada text and no one's going to judge me. I will give the bramhacks 2024 and I am 
-                going to win it.
+              This is the actual content, this is where posts will be popping up.
               </div>
-
+              <br></br>
               <div className="text-xl font-bold">
                   This is the title of the content
               </div>
               <div className="text-lg">
-                This is the actual content, I can write any yada yada text and no one's going to judge me. I will give the bramhacks 2024 and I am 
-                going to win it.
+              This is the actual content, this is where posts will be popping up.
               </div>
+              <br></br>
 
             </div>
           </div>
-          <div className="text-lg font-bold bg-slate-100 h-screen flex justify-center items-center">
+          <div className="text-lg font-bold h-screen flex justify-center items-center border-l">
             Welcome to medium 
           </div>
         </div>
