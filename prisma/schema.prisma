@@ -8,8 +8,8 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model user{
-  id       String @id @default(uuid())
+model User {
+  id       String @id@default(uuid())
   username String @unique
-  passwors String
+  password String 
 }
