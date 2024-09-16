@@ -1,3 +1,6 @@
+// button uses axios.post because it will post the username and the password or any other type of schema that is been introduced by the database
+// provider. Followin the " Prsima.Schema "
+
 "use client"
 import axios from "axios";
 import { ChangeEventHandler, useState } from "react";
@@ -7,8 +10,7 @@ export function Signup() {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
     const router = useRouter();
-
-    return <div className="h-screen flex justify-center flex-col">
+    return <div className="h-screen flex justify-center flex-col bg-slate-200">
         <div className="flex justify-center">
         <a href="#" className="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 ">
                 <div>
@@ -20,23 +22,27 @@ export function Signup() {
                     <div className="pt-2">
                         <LabelledInput onChange={(e) => {
                             setUsername(e.target.value);
-                        }} label="Username" placeholder="harkirat@gmail.com" />
+                        }} label="Username" placeholder="Email" type="text"/>
+
                         <LabelledInput onChange={(e) => {
                             setPassword(e.target.value)
-                        }} label="Password" type={"password"} placeholder="123456" />
+                        }} label="Password" type={"password"} placeholder="Password" />
+
                         <button onClick={async () => {
                             await axios.post("http://localhost:3000/api/user", {
                                 username,
                                 password
                             });
                             router.push("/")
-                        }} type="button" className="mt-8 w-full text-white bg-gray-800 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2">Sign up</button>
+                        }} type="button" className="mt-4 w-full text-white bg-gray-800 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2">Sign up</button>
+                        <div className="text-sm text-gray-500 mt-2">
+                            Already have an account? <a href="/login" className="text-gray-500 hover:underline hover:text-gray-800">Login</a>
+                        </div>
                     </div>
                 </div>
             </a>
         </div>
     </div>
-
 }
 
 function LabelledInput({ label, placeholder, type, onChange }: LabelledInputType) {
