@@ -32,7 +32,7 @@ export default async function Home() {
       </div>
           
 
-      <div className="flex justify-center font-bold bg-gray-100">
+      <div className="flex justify-center font-bold bg-gray-300">
       Get unlimited access to the best of Medium for less than $1/week.
       </div>
       <div>
@@ -50,42 +50,46 @@ export default async function Home() {
               <div className="text-xl font-bold">
                   This is the title of the content
               </div>
-              <div className="text-lg">
+              <div className="text-md">
               This is the actual content, this is where posts will be popping up. This is the actual content, this is where posts will be popping up. 
               </div>
               <br></br>
               <div className="text-xl font-bold">
                   This is the title of the content
               </div>
-              <div className="text-lg">
+              <div className="text-md">
                 This is the actual content, this is where posts will be popping up. This is the actual content, this is where posts will be popping up.
               </div>
               <br></br>
               <div className="text-xl font-bold">
                   This is the title of the content
               </div>
-              <div className="text-lg">
+              <div className="text-md">
               This is the actual content, this is where posts will be popping up. This is the actual content, this is where posts will be popping up.
               </div>
               <br></br>
               <div className="text-xl font-bold">
                   This is the title of the content
               </div>
-              <div className="text-lg">
+              <div className="text-md">
                   This is the actual content, this is where posts will be popping up. This is the actual content, this is where posts will be popping up.
               </div>
               <br></br>
             </div>
           </div>
-          <div className="text-lg font-bold h-screen flex justify-center items-center border-l">
-            Welcome to medium
+          <div className="bg-slate-100 text-xl font-bold h-screen items-center border-l flex justify-center items-center">
+            <div>
+              Welcome to Medium
+              <div className="text-sm text-gray-500">
+                The best site to post and read blogs. 
+              </div>
+            </div>
           </div>
+          
         </div>
       </div>
      
     </div>
   );
 }
-
-
 
