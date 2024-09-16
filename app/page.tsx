@@ -12,7 +12,7 @@ async function getUserDetails() {
 }
 
 /*
-Maybe the backend server is down orelse if you put anything from your side than it's not a problem
+Maybe the backend server is down or else if you put anything from your side than it's not a problem
 */ 
 
 export default async function Home() {
@@ -45,31 +45,30 @@ export default async function Home() {
                   This is the title of the content
               </div>
               <div className="text-lg">
-              This is the actual content, this is where posts will be popping up. 
+              This is the actual content, this is where posts will be popping up. This is the actual content, this is where posts will be popping up. 
               </div>
               <br></br>
               <div className="text-xl font-bold">
                   This is the title of the content
               </div>
               <div className="text-lg">
-                This is the actual content, this is where posts will be popping up.
+                This is the actual content, this is where posts will be popping up. This is the actual content, this is where posts will be popping up.
               </div>
               <br></br>
               <div className="text-xl font-bold">
                   This is the title of the content
               </div>
               <div className="text-lg">
-              This is the actual content, this is where posts will be popping up.
+              This is the actual content, this is where posts will be popping up. This is the actual content, this is where posts will be popping up.
               </div>
               <br></br>
               <div className="text-xl font-bold">
                   This is the title of the content
               </div>
               <div className="text-lg">
-              This is the actual content, this is where posts will be popping up.
+                  This is the actual content, this is where posts will be popping up. This is the actual content, this is where posts will be popping up.
               </div>
               <br></br>
-
             </div>
           </div>
           <div className="text-lg font-bold h-screen flex justify-center items-center border-l">
@@ -81,3 +80,5 @@ export default async function Home() {
     </div>
   );
 }
+
+
