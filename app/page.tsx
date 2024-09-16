@@ -22,15 +22,21 @@ export default async function Home() {
   }, 5000);
   return (
     <div>
-          <div className="border-b p-3 font-semibold ">
-              Medium
+      <div className="flex justify-between border-b p-3 font-semibold ">
+          <div>
+            Medium
           </div>
+          <div className="hover:text-gray-600 hover:cursor-pointer">
+            Anonymus
+          </div>
+      </div>
+          
 
       <div className="flex justify-center font-bold bg-gray-100">
       Get unlimited access to the best of Medium for less than $1/week.
       </div>
       <div>
-        <div className="h-screen grid grid-cols-2 flex justify-center items-center">
+        <div className="ml-3 h-screen grid grid-cols-2 flex justify-center items-center">
           <div>
             <div className="flex text-sm mb-10 border-b">
               <div className="m-3 ">
@@ -72,7 +78,7 @@ export default async function Home() {
             </div>
           </div>
           <div className="text-lg font-bold h-screen flex justify-center items-center border-l">
-            Welcome to medium 
+            Welcome to medium
           </div>
         </div>
       </div>
@@ -80,5 +86,6 @@ export default async function Home() {
     </div>
   );
 }
+
 
 
