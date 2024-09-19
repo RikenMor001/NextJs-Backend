@@ -32,21 +32,28 @@ export default async function Home() {
       </div>
           
 
-      <div className="flex justify-center font-bold bg-gray-300">
+      <div className="flex justify-center font-ligth text-black text-sm p-3 border-b">
       Get unlimited access to the best of Medium for less than $1/week.
       </div>
       <div>
         <div className="ml-3 h-screen grid grid-cols-2 flex justify-center items-center">
-          <div>
+          <div> 
             <div className="flex text-sm mb-10 border-b">
-              <div className="m-3 ">
-                <button> Follow </button>
-              </div>
-              <div className="m-3">
-              <button> Following </button>
-              </div>  
+                <div className="m-3 ">
+                  <button> Follow </button>
+                </div>
+                <div className="m-3">
+                  <button> Following </button>
+                </div>  
             </div>
-            <div>
+          <div>
+              <div className="text-xl font-bold">
+                  This is the title of the content
+              </div>
+              <div className="text-md">
+                This is the actual content, this is where posts will be popping up. This is the actual content, this is where posts will be popping up. 
+              </div>
+              <br></br>
               <div className="text-xl font-bold">
                   This is the title of the content
               </div>
@@ -76,7 +83,7 @@ export default async function Home() {
               </div>
               <br></br>
             </div>
-          </div>
+          </div> 
           <div className="bg-slate-100 text-xl font-bold h-screen items-center border-l flex justify-center items-center">
             <div>
               Welcome to Medium
@@ -85,7 +92,7 @@ export default async function Home() {
               </div>
             </div>
           </div>
-          
+
         </div>
       </div>
      
