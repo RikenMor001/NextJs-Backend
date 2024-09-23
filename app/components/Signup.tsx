@@ -1,13 +1,24 @@
 
+
 // button uses axios.post because it will post the username and the password or any other type of schema that is been introduced by the database
 // provider. Following the " Prsima.Schema "
 "use client"
 import { ChangeEvent, useState } from "react";
+import  axios from "axios"
+import { useRouter } from "next/navigation";
 
 export function Signup(){
     const [username, setUsername] = useState<String>('');
     const [password, setPassword] = useState<String>('');
+    const router = useRouter();
 
+    const handleClick = async () => {
+        const response = await axios.post("http://localhost:3000/api/user", {username, password})
+        const verify = response.data;
+        if (verify.status === 200){
+            router.push("/")   
+        }
+    }
     return <div>
             <div className="grid grid-cols-2">
                 <div className="flex justify-center flex-col">
@@ -30,6 +41,11 @@ export function Signup(){
                                 password: e.target.value
                             }))}
                         />
+                    </div>
+                    <div className="flex justify-center">
+                        <button className="bg-slate-900 text-white p-2 rounded-lg mt-3 w-1/6 text-center mt-5 hover:bg-slate-800" onClick={handleClick}>
+                            Sign Up
+                        </button>
                     </div>
                 </div>
 
