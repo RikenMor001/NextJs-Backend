@@ -9,7 +9,7 @@ export async function POST(req: NextRequest, res: NextResponse){
     prisma.user.create({
         data:{
             username: body.username,
-            passwors: body.passwors
+            password: body.password 
         }
     })
     return Response.json({
@@ -21,6 +21,9 @@ export async function POST(req: NextRequest, res: NextResponse){
         console.log(e)
     }
 }
+
+
+
 /*1. Get the headers
   2. Verify the headers
   3. Get the jwt token
@@ -28,21 +31,30 @@ export async function POST(req: NextRequest, res: NextResponse){
   5. If the token and secret is correct than 
   6. Pass the token to the user and let them access the information from the database.
 */
+/*
 export default async function GET(req: NextRequest, res: NextResponse){
     try {
-        // const headers = HEADERS || " ";
-        /* 
+         const headers = HEADERS || " ";
+         
             if(header){
             NextResponse.json({
             message: "Passed header is correct"
+            }, {status: 200})}
+
+        const token = bearer.split(" ")[1];
+        if(token){
+        const decoded = jwt.verify(token JWT_SECRET);
+        if(decoded){
+            NextResponse.json({
+                message: "Passed token is correct"
             }, {status: 200})
-            }
-        */
+        }
+
         const body = await req.body;
         prisma.user.findMany({
             where:{
-                // username: body.username,
-                // passwors: body.passwors
+                 username: body.username,
+                 passwors: body.passwors
             }
         })  
 
@@ -54,6 +66,7 @@ export default async function GET(req: NextRequest, res: NextResponse){
             error: "The error is :- " + error 
         }, {status: 411})
     }
-    
 }
+*/
+
 
