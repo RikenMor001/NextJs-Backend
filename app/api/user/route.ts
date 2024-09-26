@@ -22,8 +22,6 @@ export async function POST(req: NextRequest, res: NextResponse){
     }
 }
 
-
-
 /*1. Get the headers
   2. Verify the headers
   3. Get the jwt token
@@ -31,42 +29,41 @@ export async function POST(req: NextRequest, res: NextResponse){
   5. If the token and secret is correct than 
   6. Pass the token to the user and let them access the information from the database.
 */
-/*
+
 export default async function GET(req: NextRequest, res: NextResponse){
-    try {
-         const headers = HEADERS || " ";
-         
-            if(header){
-            NextResponse.json({
-            message: "Passed header is correct"
-            }, {status: 200})}
-
-        const token = bearer.split(" ")[1];
-        if(token){
-        const decoded = jwt.verify(token JWT_SECRET);
-        if(decoded){
-            NextResponse.json({
-                message: "Passed token is correct"
-            }, {status: 200})
+    const header = req.headers;
+    const authHeader = req.headers.get("Authorization");
+    if(!authHeader){
+        return NextResponse.json({
+            message:"No authorization header present" 
+        }, {status: 401})
+    }
+    const bearer = authHeader.split(" ")[1];
+    if (!bearer){
+        return NextResponse.json({
+            message: "No bearer token present"
+        }, {status: 401})
+    }
+    const username = req.nextUrl.searchParams.get("username");
+    const password = req.nextUrl.searchParams.get("password");
+    if(!username || !password){
+        return NextResponse.json({
+            message: "No username or password present"
+        }, {status: 401})
+    }
+    const user = await prisma.user.findMany({
+        where: {
+            username: username,
+            password: password
         }
-
-        const body = await req.body;
-        prisma.user.findMany({
-            where:{
-                 username: body.username,
-                 passwors: body.passwors
-            }
-        })  
-
-        NextResponse.json({
+    })
+    if (user){
+        return NextResponse.json({
             message: "User got the information"
         })
-    }catch(error){
-        NextResponse.json({
-            error: "The error is :- " + error 
-        }, {status: 411})
     }
 }
-*/
+
+
 
 
