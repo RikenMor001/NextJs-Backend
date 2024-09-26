@@ -14,6 +14,9 @@ export function Signup() {
             router.push("/");
         }
     }
+    const Signinpage = () => {
+        router.push("/signin")
+    }
 
     return (
         <div>
@@ -27,9 +30,9 @@ export function Signup() {
                             <div>
                                 Already have an account?
                             </div>
-                            <div className="underline hover:text-slate-900">
-                                <button>
-                                    Sign Up
+                            <div className= "hover:text-slate-900">
+                                <button onClick={Signinpage}>
+                                    Sign In
                                 </button>
                             </div>
                         </div>
@@ -51,9 +54,8 @@ export function Signup() {
                     </div>
                     <div className="flex justify-center">
                         <button
-                            className="bg-slate-900 text-white p-2 rounded-lg mt-3 w-1/6 text-center mt-5 hover:bg-slate-800"
-                            onClick={handleClick}
-                        >
+                            className="bg-slate-900 text-white p-2 rounded-lg mt-3 w-1/6 text-center hover:bg-slate-800"
+                            onClick={handleClick}>
                             Sign Up
                         </button>
                     </div>
