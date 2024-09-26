@@ -1,4 +1,5 @@
 
+
 import { PrismaClient } from "@prisma/client";
 import { NextRequest, NextResponse } from "next/server";
 const prisma = new PrismaClient();
@@ -30,7 +31,7 @@ export async function POST(req: NextRequest, res: NextResponse){
   6. Pass the token to the user and let them access the information from the database.
 */
 
-export default async function GET(req: NextRequest, res: NextResponse){
+export async function GET(req: NextRequest, res: NextResponse){
     const header = req.headers;
     const authHeader = req.headers.get("Authorization");
     if(!authHeader){
@@ -63,6 +64,9 @@ export default async function GET(req: NextRequest, res: NextResponse){
         })
     }
 }
+
+
+
 
 
 
