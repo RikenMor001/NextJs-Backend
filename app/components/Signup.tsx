@@ -1,5 +1,4 @@
 
-
 // button uses axios.post because it will post the username and the password or any other type of schema that is been introduced by the database
 // provider. Following the " Prsima.Schema "
 "use client"
@@ -22,6 +21,22 @@ export function Signup(){
     return <div>
             <div className="grid grid-cols-2">
                 <div className="flex justify-center flex-col">
+                    <div className="mb-3">
+                    <div className="flex justify-center font-bold text-3xl">
+                        Create an account
+                    </div>
+                        <div className="flex justify-center text-slate-500 text-md">
+                            <div>
+                                Already have an account?
+                            </div>
+                            <div className="underline hover:text-slate-900">
+                                <button>
+                                    Sign Up
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
                     <div>
                         <Input
                             label="Username"
@@ -87,7 +102,7 @@ function Input({label, placeholder, type, onChange}: SignupProps){
             placeholder={placeholder}
             type={type}
             onChange={onChange}
-            className="w-full bg-gray-50 text-gray-900 text-sm rounded-lg shadow-lg px-2 py-4 border border-gray-200"
+            className="w-full bg-gray-50 text-gray-900 text-sm rounded-lg shadow-lg px-2 py-4 border border-gray-300"
             required
             />
         </div>
