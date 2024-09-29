@@ -1,5 +1,5 @@
 import axios from "axios";
-
+import { Appbar } from "./components/App";
 
 async function getUserDetails() {
 
@@ -17,21 +17,10 @@ Maybe the backend server is down or else if you put anything from your side than
 
 export default async function Home() {
   const userData = await getUserDetails();
-  setTimeout(() => {
-    window.location.href = "/";
-  }, 5000);
   return (
     <div>
-      <div className="flex justify-between border-b p-3 font-semibold ">
-          <div>
-            Medium
-          </div>
-          <div className="hover:text-gray-600 hover:cursor-pointer">
-            Anonymus
-          </div>
-      </div>
-          
-
+      <Appbar/>
+        
       <div className="flex justify-center font-ligth text-black text-sm p-3 border-b">
       Get unlimited access to the best of Medium for less than $1/week.
       </div>
