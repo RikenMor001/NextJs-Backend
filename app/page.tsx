@@ -21,59 +21,82 @@ export default async function Home() {
     <div>
       <Appbar/>
         
-      <div className="flex justify-center font-ligth text-black text-sm p-3 border-b">
-      Get unlimited access to the best of Medium for less than $1/week.
+      <div className="flex justify-center font-light text-black text-sm p-3 border-b">
+        Get unlimited access to the best of Medium for less than $1/week.
       </div>
+      
       <div>
-        <div className="ml-3 h-screen grid grid-cols-2 flex justify-center items-center">
+        <div className="ml-3 h-screen grid grid-cols-[65%_35%] flex justify-center items-center">
           <div> 
             <div className="flex text-sm mb-10 border-b">
-                <div className="m-3 ">
+                <div className="m-3">
                   <button> Follow </button>
                 </div>
                 <div className="m-3">
                   <button> Following </button>
                 </div>  
             </div>
-          <div>
+            <div>
               <div className="text-xl font-bold">
                   This is the title of the content
               </div>
               <div className="text-md">
-                This is the actual content, this is where posts will be popping up. This is the actual content, this is where posts will be popping up. 
+                This is the actual content, this is where posts will be popping up. 
               </div>
-              <br></br>
+              <br />
               <div className="text-xl font-bold">
                   This is the title of the content
               </div>
               <div className="text-md">
-              This is the actual content, this is where posts will be popping up. This is the actual content, this is where posts will be popping up. 
+                This is the actual content, this is where posts will be popping up. 
               </div>
-              <br></br>
+              <br />
               <div className="text-xl font-bold">
                   This is the title of the content
               </div>
               <div className="text-md">
-                This is the actual content, this is where posts will be popping up. This is the actual content, this is where posts will be popping up.
+                This is the actual content, this is where posts will be popping up. 
               </div>
-              <br></br>
+              <br />
               <div className="text-xl font-bold">
                   This is the title of the content
               </div>
               <div className="text-md">
-              This is the actual content, this is where posts will be popping up. This is the actual content, this is where posts will be popping up.
+                This is the actual content, this is where posts will be popping up. 
               </div>
-              <br></br>
+              <br />
               <div className="text-xl font-bold">
                   This is the title of the content
               </div>
               <div className="text-md">
-                  This is the actual content, this is where posts will be popping up. This is the actual content, this is where posts will be popping up.
+                This is the actual content, this is where posts will be popping up. 
               </div>
-              <br></br>
+              <br />
+              <div className="text-xl font-bold">
+                  This is the title of the content
+              </div>
+              <div className="text-md">
+                This is the actual content, this is where posts will be popping up. 
+              </div>
+              <br />
+              <div className="text-xl font-bold">
+                  This is the title of the content
+              </div>
+              <div className="text-md">
+                This is the actual content, this is where posts will be popping up. 
+              </div>
+              <br />
+              <div className="text-xl font-bold">
+                  This is the title of the content
+              </div>
+              <div className="text-md">
+                This is the actual content, this is where posts will be popping up. 
+              </div>
+              <br />
             </div>
           </div> 
-          <div className="bg-slate-100 text-xl font-bold h-screen items-center border-l flex justify-center items-center">
+
+          <div className="bg-slate-100 text-xl font-bold h-screen border-l flex justify-center items-center">
             <div>
               Welcome to Medium
               <div className="text-sm text-gray-500">
@@ -81,10 +104,8 @@ export default async function Home() {
               </div>
             </div>
           </div>
-
         </div>
       </div>
-     
     </div>
   );
 }
