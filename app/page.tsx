@@ -96,17 +96,17 @@ export default async function Home() {
             </div>
           </div> 
 
-          <div className="bg-slate-100 text-xl font-bold h-screen border-l flex justify-center items-center">
-            <div>
-              Welcome to Medium
-              <div className="text-sm text-gray-500">
-                The best site to post and read blogs. 
-              </div>
-            </div>
+          <div className="flex justify-center flex-col items-center h-screen border border-l">
+            // Here I will call the function that will return the posts,suggestions and the user details
           </div>
+
         </div>
       </div>
     </div>
   );
+  async function rightssidebar(){
+    
+  }
 }
+
 
