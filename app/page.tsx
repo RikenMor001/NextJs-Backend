@@ -1,4 +1,5 @@
 
+
 import axios from "axios";
 import { Appbar } from "./components/App";
 
@@ -37,56 +38,56 @@ export default async function Home() {
                 This is the title of the content
               </div>
               <div className="text-md">
-                This is the actual content, where posts will appear.
+                This is the actual content, where posts will appear.This is the actual content, where posts will appear 
               </div>
               <br />
               <div className="text-xl font-bold">
                 This is the title of the content
               </div>
               <div className="text-md">
-                This is the actual content, where posts will appear.
+                This is the actual content, where posts will appear.This is the actual content, where posts will appear 
               </div>
               <br />
               <div className="text-xl font-bold">
                 This is the title of the content
               </div>
               <div className="text-md">
-                This is the actual content, where posts will appear.
+                This is the actual content, where posts will appear.This is the actual content, where posts will appear 
               </div>
               <br />
               <div className="text-xl font-bold">
                 This is the title of the content
               </div>
               <div className="text-md">
-                This is the actual content, where posts will appear.
+                This is the actual content, where posts will appear.This is the actual content, where posts will appear 
               </div>
               <br />
               <div className="text-xl font-bold">
                 This is the title of the content
               </div>
               <div className="text-md">
-                This is the actual content, where posts will appear.
+                This is the actual content, where posts will appear.This is the actual content, where posts will appear 
               </div>
               <br />
               <div className="text-xl font-bold">
                 This is the title of the content
               </div>
               <div className="text-md">
-                This is the actual content, where posts will appear.
+                This is the actual content, where posts will appear.This is the actual content, where posts will appear 
               </div>
               <br />
               <div className="text-xl font-bold">
                 This is the title of the content
               </div>
               <div className="text-md">
-                This is the actual content, where posts will appear.
+                This is the actual content, where posts will appear.This is the actual content, where posts will appear 
               </div>
               <br />
                             <div className="text-xl font-bold">
                 This is the title of the content
               </div>
               <div className="text-md">
-                This is the actual content, where posts will appear.
+                This is the actual content, where posts will appear.This is the actual content, where posts will appear 
               </div>
               <br />
             </div>
@@ -304,4 +305,6 @@ export default async function Home() {
   );
 }
 */
+
+
 
