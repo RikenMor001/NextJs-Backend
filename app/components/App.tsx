@@ -1,10 +1,15 @@
 "use client"
 import { signOut } from "next-auth/react";
+import { useRouter } from "next/navigation";
 
 export function Appbar() {
+    const router = useRouter();
+
     function Signout(){
-        signOut()
+        signOut();
+        router.push("/signin")
     }
+
     return <div>
         <div className="flex justify-between items-center text-slate-900 p-3 font-semibold border boder-b">
             <div className="flex justify-center items-center">
