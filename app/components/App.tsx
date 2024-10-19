@@ -17,7 +17,10 @@ export function Appbar() {
                     Medium 
                 </div>
                 <div className="mt-1 ml-3 text-sm text-slate-500 rounded-lg bg-slate-100 p-2 px-10 font-semibold">
-                    Search 
+                    <Input
+                     type="text"
+                     placeholder="Search"   
+                    />
                 </div>
             </div>
             <div className="flex">
@@ -36,4 +39,18 @@ export function Appbar() {
             
         </div>
     </div> 
+}
+
+interface SignupProps {
+    placeholder: string;
+    type?: string;
+}
+
+function Input({ placeholder, type }: SignupProps){
+    return <div>
+        <div >
+            { placeholder }
+            { type }
+        </div>
+    </div>
 }
