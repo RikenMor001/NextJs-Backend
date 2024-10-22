@@ -1,9 +1,11 @@
 "use client"
 import { signOut } from "next-auth/react";
 import { useRouter } from "next/navigation";
+import { ChangeEvent, useState } from "react";
 
 export function Appbar() {
     const router = useRouter();
+    const [ serach, setSearch ] = useState<string>(" ");
 
     function Signout(){
         signOut();
@@ -16,11 +18,12 @@ export function Appbar() {
                 <div className="text-2xl">
                     Medium 
                 </div>
-                <div className="mt-1 ml-3 text-sm text-slate-500 rounded-lg bg-slate-100 p-2 px-10 font-semibold">
-                    <Input
-                     type="text"
-                     placeholder="Search"   
-                    />
+                <div>
+                <Input
+                placeholder="Search"
+                type="text"
+                onChange={(e) => setSearch(e.target.value)}
+                />
                 </div>
             </div>
             <div className="flex">
@@ -41,16 +44,21 @@ export function Appbar() {
     </div> 
 }
 
-interface SignupProps {
-    placeholder: string;
-    type?: string;
+// onChange: (e: ChangeEvent<HTMLInputElement>) => void
+
+interface SearchProps {
+    placeholder: string,
+    type: string,
+    onChange: (e: ChangeEvent<HTMLInputElement>) => void
 }
 
-function Input({ placeholder, type }: SignupProps){
+function Input({placeholder, type, onChange}: SearchProps){
     return <div>
-        <div >
-            { placeholder }
-            { type }
-        </div>
-    </div>
+        <input
+            placeholder = { placeholder }
+            type = { type }
+            onChange = {onChange}
+            className="mt-1 ml-3 text-sm text-slate-500 rounded-lg bg-slate-100 py-2 px-2 font-semibold border border-slate-200"
+        />
+    </div>        
 }
